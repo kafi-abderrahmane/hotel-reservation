@@ -34,7 +34,6 @@ const CheckAvailability = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2  items-center justify-center border border-golden divide-y lg:divide-y-[0px] lg:divide-x divide-golden z-50 w-full">
             <div className="grid grid-cols-1 md:grid-cols-2 items-center justify-center divide-y md:divide-y-[0px]  divide-x divide-golden">
               <button
-                ref={(button) => setButtonRef(button)}
                 onClick={() => setOpen(!open)}
                 className="px-4 py-3 text-base font-jost text-white flex flex-row items-center justify-between gap-4 min-h-[60px]">
                 <span className="capitalize font-marcellus ">Check in</span>
@@ -54,6 +53,7 @@ const CheckAvailability = () => {
                 </div>
               </button>
               <button
+                ref={(button) => setButtonRef(button)}
                 onClick={() => setOpen(!open)}
                 className="px-4 py-3 text-base font-jost text-white flex flex-row items-center justify-between gap-4 min-h-[60px]">
                 <span className="capitalize font-marcellus">Check out</span>
