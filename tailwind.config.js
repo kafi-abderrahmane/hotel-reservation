@@ -8,6 +8,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        golden: "#ab916c",
+      },
       fontFamily: {
         jost: ["Jost", "sans-serif"],
         marcellus: ["Marcellus", "serif"],
