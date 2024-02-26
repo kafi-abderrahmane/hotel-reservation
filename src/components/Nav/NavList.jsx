@@ -44,11 +44,11 @@ const NavList = () => {
 `;
   const router = useRouter();
   return (
-    <div className="flex flex-row items-center justify-center gap-x-8 font-jost font-medium text-[13px] leading-[16px] text-white uppercase">
+    <div className="flex flex-row items-center justify-start gap-x-8 font-jost font-medium text-[13px] leading-[16px] text-white uppercase">
       <span className="text-base flex items-center justify-center">
         <DehazeIcon />
       </span>
-      <div className="flex flex-row items-start justify-center gap-0.5 group/home cursor-pointer">
+      <div className="hidden lg:flex flex-row items-start justify-center gap-0.5 group/home cursor-pointer">
         <div className="flex flex-col gap-1">
           <span>home</span>
           <div
@@ -66,14 +66,14 @@ const NavList = () => {
           <Reveal
             keyframes={customAnimation}
             duration={400}
-            className="bg-black px-20">
+            className="bg-black px-16">
             <div className="w-full h-[400px] shadow-xl max-w-[1300px] mx-auto py-6">
               test
             </div>
           </Reveal>
         </div>
       </div>
-      <div className="flex flex-row items-start justify-center gap-0.5 group/rooms cursor-pointer relative">
+      <div className="hidden lg:flex flex-row items-start justify-center gap-0.5 group/rooms cursor-pointer relative">
         <div className="flex flex-col gap-1">
           <span>rooms</span>
           <div
@@ -100,7 +100,7 @@ const NavList = () => {
           </Reveal>
         </div>
       </div>
-      <div className="flex flex-row items-start justify-center gap-0.5 group/pages cursor-pointer relative">
+      <div className="hidden lg:flex flex-row items-start justify-center gap-0.5 group/pages cursor-pointer relative">
         <div className="flex flex-col gap-1">
           <span>pages</span>
           <div

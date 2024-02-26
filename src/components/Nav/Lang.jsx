@@ -7,7 +7,7 @@ const Lang = () => {
   const router = useRouter();
 
   const handleCloseCountry = (locale) => {
-    router.push(router.asPath, router.asPath, {
+    router.push(router.asPath, undefined, {
       locale: locale,
     });
   };
