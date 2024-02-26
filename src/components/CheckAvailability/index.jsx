@@ -31,58 +31,61 @@ const CheckAvailability = () => {
           Your Next Boutique Apartments
         </h1>
         <div className="relative flex items-center justify-center w-full max-w-[1000px] ">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 items-center justify-center border border-golden divide-y md:divide-y-[0px] lg:divide-x divide-golden z-50 w-full">
-            <button
-              ref={(button) => setButtonRef(button)}
-              onClick={() => setOpen(!open)}
-              className="px-4 py-3 text-base font-jost text-white flex flex-row items-center justify-between gap-4 min-h-[60px]">
-              <span className="capitalize font-marcellus ">Check in</span>
-              <div className="flex flex-row items-center justify-center">
-                <span className="text-sm">
-                  {value?.startDate
-                    ?.toLocaleDateString(locales[router?.locale], {
-                      year: "numeric",
-                      month: "2-digit",
-                      day: "2-digit",
-                    })
-                    .replaceAll("/", "-")}
-                </span>
-                <span className="text-base flex items-center justify-center text-golden">
-                  <KeyboardArrowDownIcon fontSize="inherit" />
-                </span>
-              </div>
-            </button>
-            <button
-              onClick={() => setOpen(!open)}
-              className="px-4 py-3 text-base font-jost text-white flex flex-row items-center justify-between gap-4 min-h-[60px]">
-              <span className="capitalize font-marcellus">Check out</span>
-              <div className="flex flex-row items-center justify-center">
-                <span className="text-sm">
-                  {value?.endDate
-                    ?.toLocaleDateString(locales[router?.locale], {
-                      year: "numeric",
-                      month: "2-digit",
-                      day: "2-digit",
-                    })
-                    .replaceAll("/", "-")}
-                </span>
-                <span className="text-base flex items-center justify-center text-golden">
-                  <KeyboardArrowDownIcon fontSize="inherit" />
-                </span>
-              </div>
-            </button>
-
-            <DropDownGuests
-              numberAdults={numberAdults}
-              setnumberAdults={setnumberAdults}
-              numberChildren={numberChildren}
-              setNumberChildren={setNumberChildren}
-            />
-            <Link
-              href={"/"}
-              className="px-4 text-base text-white font-marcellus min-h-[60px] flex items-center justify-center text-center">
-              <span>Check Availability</span>
-            </Link>
+          <div className="grid grid-cols-1 lg:grid-cols-2  items-center justify-center border border-golden divide-y lg:divide-y-[0px] lg:divide-x divide-golden z-50 w-full">
+            <div className="grid grid-cols-1 md:grid-cols-2 items-center justify-center divide-y md:divide-y-[0px]  divide-x divide-golden">
+              <button
+                ref={(button) => setButtonRef(button)}
+                onClick={() => setOpen(!open)}
+                className="px-4 py-3 text-base font-jost text-white flex flex-row items-center justify-between gap-4 min-h-[60px]">
+                <span className="capitalize font-marcellus ">Check in</span>
+                <div className="flex flex-row items-center justify-center">
+                  <span className="text-sm">
+                    {value?.startDate
+                      ?.toLocaleDateString(locales[router?.locale], {
+                        year: "numeric",
+                        month: "2-digit",
+                        day: "2-digit",
+                      })
+                      .replaceAll("/", "-")}
+                  </span>
+                  <span className="text-base flex items-center justify-center text-golden">
+                    <KeyboardArrowDownIcon fontSize="inherit" />
+                  </span>
+                </div>
+              </button>
+              <button
+                onClick={() => setOpen(!open)}
+                className="px-4 py-3 text-base font-jost text-white flex flex-row items-center justify-between gap-4 min-h-[60px]">
+                <span className="capitalize font-marcellus">Check out</span>
+                <div className="flex flex-row items-center justify-center">
+                  <span className="text-sm">
+                    {value?.endDate
+                      ?.toLocaleDateString(locales[router?.locale], {
+                        year: "numeric",
+                        month: "2-digit",
+                        day: "2-digit",
+                      })
+                      .replaceAll("/", "-")}
+                  </span>
+                  <span className="text-base flex items-center justify-center text-golden">
+                    <KeyboardArrowDownIcon fontSize="inherit" />
+                  </span>
+                </div>
+              </button>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 items-center justify-center divide-y md:divide-y-[0px]  divide-x divide-golden">
+              <DropDownGuests
+                numberAdults={numberAdults}
+                setnumberAdults={setnumberAdults}
+                numberChildren={numberChildren}
+                setNumberChildren={setNumberChildren}
+              />
+              <Link
+                href={"/"}
+                className="px-4 text-base text-white font-marcellus min-h-[60px] flex items-center justify-center text-center">
+                <span>Check Availability</span>
+              </Link>
+            </div>
           </div>
           <div className="absolute border border-golden w-[calc(100%+10px)] h-[calc(100%-10px)]"></div>
         </div>
