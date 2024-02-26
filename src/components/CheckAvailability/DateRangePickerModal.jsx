@@ -59,7 +59,14 @@ export default function DateRangePickerModal({
             <button
               onClick={onConfirm}
               type="button"
-              className="rounded text-white bg-golden px-4">
+              disabled={
+                initState[0]?.startDate !== initState[0]?.endDate ? false : true
+              }
+              className={`rounded text-white bg-golden px-4 ${
+                initState[0]?.startDate !== initState[0]?.endDate
+                  ? ""
+                  : "bg-opacity-40"
+              }`}>
               Done
             </button>
           </Box>
